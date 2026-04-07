@@ -14,21 +14,14 @@ body {
 }
 
 header {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
 }
 
 header h1 {
     color: #00c3ff;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+    margin: 0;
 }
 
 .hero {
@@ -37,8 +30,12 @@ nav a {
 }
 
 .hero h2 {
-    font-size: 50px;
+    font-size: 45px;
     color: #00c3ff;
+}
+
+.hero p {
+    font-size: 18px;
 }
 
 button {
@@ -59,95 +56,71 @@ button:hover {
     text-align: center;
 }
 
-.voos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
 .card {
     background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0,195,255,0.3);
+}
+
+.price {
+    color: #00c3ff;
+    font-size: 24px;
+    margin: 15px 0;
 }
 
 footer {
     text-align: center;
     padding: 20px;
     background: #000;
+    margin-top: 50px;
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
-    <h1>✈️ SKRDREAM</h1>
-    <nav>
-        <a href="#">Início</a>
-        <a href="#voos">Voos</a>
-        <a href="#sobre">Sobre</a>
-    </nav>
+    <h1>✈️ SKRDREAM Airlines</h1>
 </header>
 
 <section class="hero">
-    <h2>Viaje para qualquer lugar do mundo</h2>
-    <p>Conforto, segurança e os melhores preços</p>
-    <button onclick="mostrarVoos()">Ver voos</button>
+    <h2>Viaje para Miami com conforto</h2>
+    <p>A melhor experiência aérea com tudo incluso</p>
+    <button onclick="irParaVoos()">Ver voo</button>
 </section>
 
 <section id="voos" class="section">
-    <h2>🌍 Voos Disponíveis</h2>
-    <div class="voos">
+    <h2>🌍 Voo Disponível</h2>
 
-        <div class="card">
-            <h3>São Paulo → Rio</h3>
-            <p>R$ 199</p>
-            <button onclick="comprar()">Comprar</button>
+    <div class="card">
+        <h3>Brasil → Miami 🇺🇸</h3>
+        <p><strong>Classe Econômica Premium</strong></p>
+        <p>✔ Bagagem inclusa</p>
+        <p>✔ Refeições completas</p>
+        <p>✔ Entretenimento a bordo</p>
+        <p>✔ Assento confortável</p>
+
+        <div class="price">
+            R$ 3.499 (tudo incluso)
         </div>
 
-        <div class="card">
-            <h3>Curitiba → São Paulo</h3>
-            <p>R$ 150</p>
-            <button onclick="comprar()">Comprar</button>
-        </div>
-
-        <div class="card">
-            <h3>Brasil → EUA</h3>
-            <p>R$ 2.500</p>
-            <button onclick="comprar()">Comprar</button>
-        </div>
-
-        <div class="card">
-            <h3>Brasil → Europa</h3>
-            <p>R$ 3.200</p>
-            <button onclick="comprar()">Comprar</button>
-        </div>
-
+        <button onclick="comprar()">Comprar passagem</button>
     </div>
 </section>
 
-<section id="sobre" class="section">
-    <h2>Sobre a SKRDREAM</h2>
-    <p>
-        A SKRDREAM é uma companhia aérea focada em oferecer a melhor experiência
-        para seus passageiros. Nosso objetivo é conectar você ao mundo com conforto,
-        segurança e tecnologia.
-    </p>
-</section>
-
 <footer>
-    <p>© 2026 SKRDREAM Airlines</p>
+    <p>© 2026 SKRDREAM Airlines - Todos os direitos reservados</p>
 </footer>
 
 <script>
 function comprar() {
-    alert("Compra realizada com sucesso! ✈️");
+    alert("✈️ Passagem para Miami comprada com sucesso!");
 }
 
-function mostrarVoos() {
+function irParaVoos() {
     document.getElementById("voos").scrollIntoView({ behavior: "smooth" });
 }
 </script>
